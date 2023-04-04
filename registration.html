@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Registration</title>
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #DFD3C3;
+    }
+    h1 {
+        text-align: center;
+        margin-top: 50px;
+    }
+    form {
+        background-color: #FFDEB4;
+        border-radius: 10px;
+        padding: 80px;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    label {
+        display: block;
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+    input, select {
+        display: block;
+        width: 80%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        border: none;
+        background-color: #f2f2f2;
+        font-size: 16px;
+    }
+    select {
+        appearance: none;
+        background-repeat: no-repeat;
+        background-size: 8px 8px;
+        padding-right: 30px;
+    }
+    button {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #3e8e41;
+    }
+</style>
+  </head>
+  <body>
+    <h1>Employee Registration Form</h1>
+<form action="register.php" method="post">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+<br>
+    <label for="last_name">Last Name:</label>
+    <input type="text" id="last_name" name="last_name" required>
+<br>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+<br>
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+<br>
+    <label for="unit">Unit:</label>
+    <select id="unit" name="unit" required>
+        <option value="">Select Unit</option>
+        <option value="UNIT MW">UNIT (Mulund west)</option>
+        <option value="UNIT ME">UNIT (Mulund east)</option>
+        <option value="UNIT BW">UNIT (Bhandup west)</option>
+  <option value="UNIT BE">UNIT (Bhandup east)</option>
+    </select>
+<br>
+    <label for="area">Area:</label>
+<select id="area" name="Area" required>
+  <option value="">Select Area</option>
+  <option value="Mulund west">Mulund west</option>
+  <option value="Mulund east">Mulund east</option>
+  <option value="Bhandup west">Bhandup west</option>
+  <option value="Bhandup east">Bhandup east</option>
+</select>
+<br>
+    <button type="submit">Register</button>
+</form>
+<script type="text/javascript"> src="main.js"</script>
+  </body>
+</html>
